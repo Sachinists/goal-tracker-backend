@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "google"
+  ],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "no-console": 0,
+    "cyclomatic-complexity": [
+      true,
+      10
+    ],
+    "no-invalid-template-strings": true,
+    "no-conditional-assignment": true,
+    "no-sparse-arrays": true,
+    "no-boolean-literal-compare": true
+  }
+}
