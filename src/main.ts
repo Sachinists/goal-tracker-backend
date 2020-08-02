@@ -1,1 +1,3 @@
-console.log('Hello World!');
+import logger from './services/logger';
+
+logger.debug('Hello World!');
