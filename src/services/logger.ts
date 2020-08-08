@@ -1,9 +1,9 @@
-const pino = require('pino');
+const pino = require("pino");
 const logger = pino({
   prettyPrint: {
-    translateTime: 'SYS:standard',
-    ignore: 'hostname,pid',
+    translateTime: "SYS:standard",
+    ignore: "hostname,pid",
   },
-  level: 'debug',
+  level: "debug",
 }, process.stderr);
 export default logger;

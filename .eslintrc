@@ -21,6 +21,8 @@
     "linebreak-style": [
       "error",
       "windows"
-    ]
+    ],
+    "quotes": ["error", "double", { "avoidEscape": true }],
+    "new-cap": ["error", { "capIsNewExceptionPattern": "express" }]
   }
 }
