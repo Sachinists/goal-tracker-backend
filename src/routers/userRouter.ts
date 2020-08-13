@@ -1,17 +1,9 @@
 import express from "express";
-import {HTTPStatusCodes} from "../models/HttpStatusCodes";
-import {processingTime} from "../middlewares/ProcessingTime";
+import userController from "../controllers/userController";
+import {createUserValidator} from "../middlewares/UserValidators";
 
-const router = express.Router();
+const userRouter = express.Router();
 
-router.get("/user", processingTime, (req: any, res: any) => {
-  const result = {
-    user: "Debjyoti Pandit",
-    email: "debjyotipandit35@gmail.com",
-  };
-  const outTime: number[] = process.hrtime(req.headers.inTime);
-  res.headers = {...res.headers, outTime};
-  res.status(HTTPStatusCodes.SUCCESS).send(result);
-});
+userRouter.post("/create-user", createUserValidator, userController.createUser);
 
-export default router;
+export default userRouter;

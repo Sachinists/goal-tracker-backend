@@ -23,6 +23,22 @@
       "windows"
     ],
     "quotes": ["error", "double", { "avoidEscape": true }],
-    "new-cap": ["error", { "capIsNewExceptionPattern": "express" }]
+    "new-cap": ["error", { "capIsNewExceptionPattern": "express" }],
+    "max-len": ["error", { 
+        "code": 80,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true
+    }],
+    "require-jsdoc": ["error", {
+        "require": {
+            "FunctionDeclaration": true,
+            "MethodDefinition": false,
+            "ClassDeclaration": false,
+            "ArrowFunctionExpression": false,
+            "FunctionExpression": false
+        }
+    }]
   }
 }
